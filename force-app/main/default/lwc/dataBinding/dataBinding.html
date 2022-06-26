@@ -1,0 +1,27 @@
+<template>
+
+    <lightning-card title="oninput">
+<!-- 2. use the property in the header dynamically using {} -->
+        <h1>Hello {inputValue}</h1>
+<!-- 3. create an input box
+use oninput handle to run when there is a change in the input -->
+        <input 
+        type="text" 
+        value={inputValue}
+        oninput={handleInput}
+        placeholder="Enter country name"/>
+        <p>Entered Value : {inputValue}</p>
+    </lightning-card>
+
+
+    <lightning-card title="onchange">
+        <h1>Country : {country}</h1>
+        <lightning-input 
+        type="text" 
+        label="Enter some text"
+        value={country}
+        onchange={handleChange}
+        placeholder="Enter country name"></lightning-input>
+    </lightning-card>
+    
+</template>
