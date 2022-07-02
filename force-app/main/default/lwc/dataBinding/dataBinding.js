@@ -15,4 +15,5 @@ export default class DataBinding extends LightningElement {
     handleChange(event){
         this.country=event.target.value
     }
+    
 }

@@ -1,0 +1,81 @@
+<template>
+<!-- •Create a LWC: componentLibrary
+•Create below elements
+Card
+Avatar
+Button
+Input
+Layout
+Layout item
+Navigation
+Checkbox
+Radio button -->
+
+<!-- card -->
+<lightning-card title="LWC Component Library Homework">
+    <!-- Avatar -->
+    <lightning-avatar src="https://www.lightningdesignsystem.com/assets/images/avatar2.jpg"></lightning-avatar>
+
+    <hr/>
+
+    <!-- Button : Destructive variant: Identifies a potentially negative action -->
+    <lightning-button variant="destructive" label="Destructive" title="Button" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        <!-- use js file for on click as well  -->
+    <h1>{clickedButtonLabel}</h1>
+     <hr/>
+    <!-- Input : Default/basic -->
+    <div class="slds-p-around_medium lgc-bg">
+        <lightning-input type="text" label="Enter some text"></lightning-input>
+    </div>
+
+    <hr/>
+    <!-- Layout -->
+    <lightning-layout>
+        <!-- Layout item -->
+        <lightning-layout-item padding="around-small">
+            <div class="header-column">
+                <p class="field-title" title="Field2 (3)">Field 2 (3)
+                    <lightning-button-icon icon-name="utility:down" variant="border-filled" size="small" alternative-text="More Actions"></lightning-button-icon>
+                </p>
+                <p>Eligibility</p>
+            </div>
+        </lightning-layout-item>
+    </lightning-layout>
+
+    <hr/>
+    <!-- Navigation -->
+    <div style="width: 320px;">
+        <lightning-vertical-navigation>
+            <lightning-vertical-navigation-section label="Reports">
+                <lightning-vertical-navigation-item label="Recent" name="recent"></lightning-vertical-navigation-item>
+                <lightning-vertical-navigation-item label="Created by Me" name="created"></lightning-vertical-navigation-item>
+                <lightning-vertical-navigation-item label="Private Reports" name="private"></lightning-vertical-navigation-item>
+                <lightning-vertical-navigation-item label="Public Reports" name="public"></lightning-vertical-navigation-item>
+                <lightning-vertical-navigation-item label="All Reports" name="all"></lightning-vertical-navigation-item>
+            </lightning-vertical-navigation-section>
+        </lightning-vertical-navigation>
+    </div>
+
+
+    <!-- Checkbox  -->
+    <hr/>
+    <lightning-checkbox-group name="Checkbox Group"
+                          label="Checkbox Group"
+                          options={options}
+                          value={value}
+                          onchange={handleChange}></lightning-checkbox-group>
+     <!-- Checkbox use js file for onchange as well  -->
+       <p>Selected Values are: {selectedValues}</p>
+
+       <hr/>
+       <!-- Radio button -->
+       <lightning-radio-group name="radioGroup"
+       label="Radio Group"
+       options={options}
+       value={value}
+       type="radio"
+       onchange={handleRadioChange}></lightning-radio-group>
+       <p>Selected Values are: {selectedRadioValues}</p>
+</lightning-card>
+
+</template>
