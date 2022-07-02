@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Conditional Rendering">
+
+        <template if:true={isTrue}>
+            <h1>Test</h1>
+            <p>This will be displayed when template is true</p>
+        </template>
+
+        <!-- Outside of the if directive
+        Will be always visible -->
+        <h1>This is not in if true directive</h1>
+
+        <template if:false={flag}>
+            <h1>Inside the if false directive</h1>
+            <p>P tag inside if false directive</p>
+        </template>
+
+        <template if:true={data}>
+            <h1>Show the values when there is any element is data</h1>
+        </template>
+
+    </lightning-card>
+</template>

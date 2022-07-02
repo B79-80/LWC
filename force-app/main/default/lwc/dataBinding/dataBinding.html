@@ -22,6 +22,18 @@ use oninput handle to run when there is a change in the input -->
         value={country}
         onchange={handleChange}
         placeholder="Enter country name"></lightning-input>
+   
+    </lightning-card>
+
+    <lightning-card title="onblur">
+
+        <h1>Name : {name}</h1>
+
+        <lightning-input type="text"
+        label="Enter your name"
+        placeholder="Enter your name"
+        onblur={handleBlur}></lightning-input>
+
     </lightning-card>
 
 

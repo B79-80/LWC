@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Getters">
+        <h1>Original First Name : {fName}</h1>
+        <h1>Original Last Name : {lName}</h1>
+        <h1>Modified First And Last Name : {fullNameUpperCase}</h1>
+        <h1>FIrst Name Upper : {firstNameUpper}</h1>
+
+        <hr>
+
+        <h1>Num 1 : {num1}</h1>
+        <h1>Num 2 : {num2}</h1>
+        <p>Sum : {total}</p>
+        <p>Difference : {difference}</p>
+        <p>Product : {product}</p>
+        <p>Quotient : {quotient}</p>
+
+
+        <!-- Accepting a number 1 from user -->
+        <lightning-input
+        type="number"
+        label="Enter number 1"
+        onchange={handleChange1}></lightning-input>
+        <!-- Accepting a number 2 from user -->
+        <lightning-input
+        type="number"
+        label="Enter number 2"
+        onchange={handleChange2}></lightning-input>
+
+
+    </lightning-card>
+</template>

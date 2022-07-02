@@ -4,6 +4,7 @@ export default class DataBinding extends LightningElement {
 // 1. create a property to hold the data
     inputValue='';
     country='';
+    name='john';
 
 // 4. handleInput function runs whenever there is a change in the input
 // event.target.value returns the user input value
@@ -15,5 +16,9 @@ export default class DataBinding extends LightningElement {
     handleChange(event){
         this.country=event.target.value
     }
+    handleBlur(event){
+        this.name=event.target.value
+    }
     
+
 }
