@@ -1,0 +1,15 @@
+h1{
+    color: red;
+}
+p{
+    color: yellow;
+    background-color: blueviolet;
+}
+/* c-my-child-component{
+    color: chartreuse;
+} */
+c-my-child-component{
+    --custom-bg-color: blue;
+    --my-custom-color: pink;
+
+}

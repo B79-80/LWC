@@ -19,5 +19,24 @@
             <h1>Show the values when there is any element is data</h1>
         </template>
 
+
+        <hr>
+        <!-- Create a checkbox
+        Display Please Accept the Aggreement when the checkbox is not checked
+        Display Thank you for accepting the aggreement when checkbox is checked-->
+        <lightning-input 
+        type="checkbox"
+        label="Click to accept the agreement"
+        checked={display}
+        onchange={handleChange}>
+        </lightning-input>
+        <template if:true={display}>
+            <h1>Thank you for accepting the aggreement</h1>
+        </template>
+        <template if:false={display}>
+            <h1>Please Accept the Aggreement</h1>
+        </template>
+
+        
     </lightning-card>
 </template>

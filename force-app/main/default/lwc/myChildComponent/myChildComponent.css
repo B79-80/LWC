@@ -1,0 +1,23 @@
+p{
+    color: fuchsia;
+}
+.my-header-style{
+    color: red;
+    background-color: black;
+}
+/* I can use this to style h2 of the child component
+However, I can not reuse or 
+I cannot change the value from */
+/* h2{
+    background-color: purple;
+    color: yellow;
+} */
+
+/* Instead create a custom css property 
+var(--custom-bg-color,purple);
+--custom-bg-color : custom property name
+purple : default value of the custom property*/
+h2{
+    background-color: var(--custom-bg-color,purple);
+    color: var(--my-custom-color,yellow);
+}

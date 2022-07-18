@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title = "Create Order">
+
+          <!-- Base variant: Makes a button look like a link -->
+          <lightning-button 
+          variant="base" 
+          label="Order Button" 
+          title="Looks like a link" 
+          onclick={handleOrderButton} 
+          class="slds-m-left_x-small"></lightning-button>
+
+
+          <ul>
+            <template for:each={ingredients} for:item="eachIngredients">
+                <li key={eachIngredients.id}>{eachIngredients.name}</li>
+            </template>
+          </ul>
+
+
+
+    </lightning-card>
+    
+</template>

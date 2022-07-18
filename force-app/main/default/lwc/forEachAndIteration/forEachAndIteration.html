@@ -1,0 +1,54 @@
+<template>
+    <lightning-card title="For Each">
+        <h1>{capitals}</h1>
+        <!-- use for:each to get array values
+        use for:item for define each value
+        use key to define each unique item variable  -->
+
+        <template for:each={capitals} for:item="eachCapital">
+            <p key={eachCapital}>{eachCapital}</p>
+        </template>
+        
+        <h1> CAR INVENTORY </h1>
+        <template for:each={car} for:item="eachCar">
+            <p key={eachCar}>{eachCar}</p>
+        </template>
+
+        <h1>***CUTOMER LIST***</h1>
+        <h1>NOT WORKS : {customerList}</h1>
+        <br>
+        <template for:each={customerList} for:item="eachCustomer">
+            <hr key={eachCustomer.id}>
+            <p key={eachCustomer.id}>{eachCustomer.id}</p>
+            <p key={eachCustomer.id}>{eachCustomer.name}</p>
+            <p key={eachCustomer.id}>{eachCustomer.phone}</p>
+            <p key={eachCustomer.id}>{eachCustomer.email}</p>
+            <img key={eachCustomer.id} src={eachCustomer.imgURL}/>
+            <hr key={eachCustomer.id}>
+        </template>
+    </lightning-card>
+
+    <lightning-card title="Iterator">
+        <!-- use iterator:it={capitals} to iterate over the capitals array
+        it HOLDS EACH VALUE FROM THE ARRAY -->
+        <template iterator:it={capitals}>
+            <p key={it.value}>{it.value}</p>
+        </template>
+    </lightning-card>
+
+    <lightning-card title="Iterator First and Last">
+        
+        <template iterator:it={capitals}>
+            <!-- render only the first item from  capitals array -->
+            <p key={it.value} if:true={it.first}>******First Item : {it.value}********</p>
+
+            <!-- There is not condition, so will render ALL ITEMS -->
+            <p key={it.value}>{it.value}</p>
+
+            <!-- render only the last item from capitals array  -->
+            <p key={it.value} if:true={it.last}>*****Last Item : {it.value}******</p>
+        </template>
+
+    </lightning-card>
+
+</template>
