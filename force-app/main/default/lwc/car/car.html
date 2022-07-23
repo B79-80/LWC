@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Car Component">
+        <h1>1.BMW</h1> 
+        <lightning-input label="Engine Model"
+        placeholder="Enter the engine model"
+        onchange={handleChange}></lightning-input>
+        <!-- Child -->
+        <c-car-engine engine-model={engineModelValue}>
+        </c-car-engine>
+        <!-- Grandchild -->
+        <c-car-engine-features></c-car-engine-features>
+    </lightning-card>    
+</template>
